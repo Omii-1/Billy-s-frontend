@@ -1,7 +1,7 @@
 import React from 'react'
 import { SignInUp } from "../componenets/SignInUp"
 
-function Signin() {
+function Signin() {  
   return (
     <SignInUp name={"signin"}/>
   )

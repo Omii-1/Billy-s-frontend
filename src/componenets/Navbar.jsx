@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { authActions } from "../store/auth";
+import toast from "react-hot-toast";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ function Navbar() {
           },
         }
       );
-      console.log(res.data.message);
+      toast.success(res.data.message);
       dispatch(authActions.logout());
       dispatch(authActions.changeRole(null));
       navigate("/");
